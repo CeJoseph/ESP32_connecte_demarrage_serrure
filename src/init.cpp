@@ -10,8 +10,6 @@ int initialisationBroches(void)
 {
     // Configuration des broches
     // pinMode(GPIO_B1, INPUT); // Exemple
-  
-
   return 0;
 }
 

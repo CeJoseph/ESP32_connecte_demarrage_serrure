@@ -6,5 +6,6 @@
 String GetState(int printer_id);
 int continuer_impression(int printer_id);
 int pauser_impression(int printer_id);
+int impression_finit(int printer_id);
 
 #endif

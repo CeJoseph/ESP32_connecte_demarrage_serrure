@@ -160,4 +160,26 @@ int annuler_impression(int printer_id, int raison)//cant currently be tested, re
     }
 }
 
+
+int impression_finit(int printer_id)
+{
+    bool status = false;
+    HTTPClient http;
+
+    String path = "printers/actions/ClearBed?pid=";
+    http.begin((API_HOST + path + printer_id));
+    http.addHeader("accept", "application/json");
+    http.addHeader("X-API-KEY", API_KEY);
+    int httpResponseCode = http.POST("{}");
+
+
+    if (status == true)
+    {
+        return 1; // pause successful
+    }
+    else
+    {
+        return 0; // cannot pause
+    }
+}
 //a
